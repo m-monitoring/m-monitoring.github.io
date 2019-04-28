@@ -1,0 +1,88 @@
+<?php
+/**
+ * User: ス
+ * Date: 28.04.2019
+ * Time: 16:16
+ */
+
+//
+//$data = new \StdClass();
+//$data->backend = [];
+//$data->frontend = [];
+//
+//
+////$date = new \DateTime(date('Y-m-d 00:00:00'));
+//$date = new \DateTime(date('Y-m-d 00:00:00'));
+//
+//$i = 0;
+//while($i < 24) {
+//    $data->frontend[] = [
+//        't' => (int)($date->add(new \DateInterval('PT' . (0 === $i ? '0' : 1). 'H'))->setTimezone(new \DateTimeZone('Europe/Moscow'))->getTimestamp() . '000'),
+//        'y' => rand(0, 50)
+//    ];
+////    $data->backend[] = [
+////        't' => (int)($date->add(new \DateInterval('PT' . (0 === $i ? '0' : 1). 'H'))->setTimezone(new \DateTimeZone('Europe/Moscow'))->getTimestamp() . '000'),
+////        'y' => rand(0, 50)
+////    ];
+//    $i++;
+//}
+//
+//echo '<pre>';
+//    print_r($data);
+//echo '</pre>';
+//die();
+//1556481600000
+//echo (new \DateTime('2019-04-28 23:00:00'))->setTimezone(new \DateTimeZone('Europe/Moscow'))->getTimestamp();
+
+//1490994000000
+//April 01 2017
+
+//$date = new \DateTime('01.04.2017');
+//
+//echo 1490994000000 . '<br/>';
+//echo $date->getTimestamp();
+//
+//die();
+?>
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+        <script src="https://code.jquery.com/jquery-3.4.0.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+        <script src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+        <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+        <script src="/init.js" ></script>
+        <script src="/chart-config.js" ></script>
+        <title>Мониторинг</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <h1>Очереди - Mysql</h1>
+                    <canvas id="statistics-mysql-queues"></canvas>
+                </div>
+                <div class="col-md-6 text-center">
+                    <h1>Ошибки - Kibana</h1>
+                    <canvas id="statistics-errors"></canvas>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <h1>Очереди - Rabbit</h1>
+                    <canvas id="statistics-rabbit-queues"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
